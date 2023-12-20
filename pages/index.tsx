@@ -1,3 +1,5 @@
+import ContractCard from "../components/ContractCard";
+import { ERC20_CONTRACT_ADRESS } from "../constants/addresses";
 import styles from "../styles/Home.module.css";
 import { NextPage } from "next";
 
@@ -23,7 +25,12 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.grid}>
-          
+          <ContractCard
+            href="#"
+            contractAddress={ERC20_CONTRACT_ADRESS}
+            title="ERC20 - Fasilkom"
+            description="Token ERC20 Fakultas Ilmu Komputer"
+          />
         </div>
       </div>
     </main>
