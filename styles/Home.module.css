@@ -143,3 +143,14 @@
 .logo img {
   filter: invert(1);
 }
+
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 0 auto;
+  width: 100%;
+  height: 84px;
+  max-width: 1440px;
+}
