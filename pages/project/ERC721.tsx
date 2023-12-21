@@ -1,6 +1,6 @@
 import styles from "../../styles/Home.module.css"
 import HeroCard from '../../components/HeroCard';
-import { useContract, useContractMetadata } from "@thirdweb-dev/react";
+import { useClaimedNFTSupply, useContract, useContractMetadata, useTotalCount } from "@thirdweb-dev/react";
 import { ERC721_CONTRACT_ADRESS } from "../../constants/addresses";
 
 export default function ERC721() {
@@ -12,6 +12,16 @@ export default function ERC721() {
         data: contractMetadata,
         isLoading: contractMetadataIsLoading,
     } = useContractMetadata(contract);
+
+    const {
+        data: totalSupply,
+        isLoading: totalSupplyIsLoading,
+    } = useTotalCount(contract);
+
+    const {
+        data: totalClaimedSupply,
+        isLoading: totalClaimedSupplyIsLoading,
+    } = useClaimedNFTSupply(contract);
 
     return(
         <div className={styles.container}>
@@ -34,6 +44,22 @@ export default function ERC721() {
                     </div>
                     <div className={styles.componentCard}>
                         <h3>Contract Stats</h3>
+                        <p>
+                            Total Supply: 
+                            {totalSupplyIsLoading ? (
+                                "Loading..."
+                            ) : (
+                                `${totalSupply?.toNumber()}`
+                            )}
+                        </p>
+                        <p>
+                            Total Claimed: 
+                            {totalClaimedSupplyIsLoading ? (
+                                "Loading..."
+                            ) : (
+                                `${totalClaimedSupply?.toNumber()}`
+                            )}
+                        </p>
                     </div>
                     <div className={styles.componentCard}>
                         <h3>Your NFTs</h3>
