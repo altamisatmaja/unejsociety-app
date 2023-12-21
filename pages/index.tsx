@@ -37,7 +37,7 @@ const Home: NextPage = () => {
             description="Token ERC20 Fakultas Ilmu Komputer"
           />
           <ContractCard
-            href="#"
+            href="/project/ERC721"
             contractAddress={ERC721_CONTRACT_ADRESS}
             title="ERC721 - Fasilkom"
             description="Token ERC721 Fakultas Ilmu Komputer"
