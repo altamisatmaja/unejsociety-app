@@ -2,6 +2,7 @@ import styles from "../../styles/Home.module.css";
 import HeroCard from '../../components/HeroCard';
 import { useAddress, useContract, useContractMetadata, useTokenBalance, useTokenSupply } from "@thirdweb-dev/react";
 import { ERC20_CONTRACT_ADRESS } from "../../constants/addresses";
+import Link from 'next/link';
 
 export default function ERC20() {
     const address = useAddress();
