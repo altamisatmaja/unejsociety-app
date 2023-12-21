@@ -24,7 +24,10 @@ export default function ContractCard(props: CardProps) {
             to={props.href}
             className={styles.card}
         >
-            <MediaRenderer src={contractMetadata?.image}/>
+            <MediaRenderer src={contractMetadata?.image}
+            width="100%"
+            height="auto"
+            />
             <div className={styles.cardText}>
                 <h2 className={styles.gradientText1}>{props.title}</h2>
                 <p>{props.description}</p>
