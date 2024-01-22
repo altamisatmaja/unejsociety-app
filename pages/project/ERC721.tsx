@@ -31,12 +31,14 @@ export default function ERC721() {
         isLoading: ownedNFTsIsLoading,
     } = useOwnedNFTs(contract, address);
 
+
+
     return(
         <div className={styles.container}>
             <div className={styles.contractPage}>
                 <HeroCard
                 isLoading={contractMetadataIsLoading}
-                title={contractMetadata?.title!}
+                title={contractMetadata?.name!}
                 description={contractMetadata?.description!}
                 image={contractMetadata?.image!}
                 />
@@ -95,12 +97,12 @@ export default function ERC721() {
                                     <div className={styles.cardText}>
                                         <h2>{nft.metadata.name}</h2>
                                     </div>
-                                    <Link to={'/project/Staking'}>
+                                    <Link href={'/project/staking'}>
                                         <button
                                         className={styles.matchButton}
                                         style={
-                                            width: '100%',
-                                            borderRadius: '0 0 10px 10px',
+                                            {width: '100%',
+                                            borderRadius: '0 0 10px 10px',}
                                         }
                                         >Stake NFT</button>
                                     </Link>

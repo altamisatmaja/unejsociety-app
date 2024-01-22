@@ -63,10 +63,10 @@ export default function ERC20() {
                     <h3>Dapatkan Token</h3>
                     <p>Dapatkan token lainnya dari staking ERC721 NFT</p>
                     <div>
-                        <Link to={'/project/Staking'}>
+                        <Link href={'/project/staking'}>
                             <button className={styles.matchButton}">Stake ERC721</button>
                         </Link>
-                        <Link to={'/project/ERC721'}>
+                        <Link href={'/project/ERC721'}>
                             <button className={styles.matchButton}">Claim ERC721</button>
                         </Link>
                     </div>
